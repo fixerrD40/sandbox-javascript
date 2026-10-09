@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/javascript/index.js",
   "scripts": {
+    "build": "tsc",
     "check": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,8 +12,11 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
   "devDependencies": {
-    "@types/node": "^24.5.2",
+    "@types/node": "^18.19.64",
     "tsx": "^4.20.5",
     "typescript": "^5.9.2"
   }
