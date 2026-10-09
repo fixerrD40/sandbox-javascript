@@ -10,20 +10,25 @@ function solve() {
     
     // Helper function to pull the next token
     const nextToken = (): string => tokens[ptr++];
-    const nextInt = (): number => parseInt(tokens[ptr++], 10);
 
     // --- YOUR CSES LOGIC HERE ---
-    // Example: Reading N and an array of N elements
-    if (ptr >= tokens.length || tokens[0] === '') return;
+    const n = parseInt(nextToken(), 10);
+
+    let cur = n;
+    const result: number[] = [];
+    result.push(n);
     
-    const n = nextInt();
-    const arr: number[] = [];
-    for (let i = 0; i < n; i++) {
-        arr.push(nextInt());
+    while (cur != 1) {
+      if (cur%2 == 0) {
+        cur = cur/2;
+      } else {
+        cur = cur*3+1;
+      }
+      result.push(cur);
     }
     
     // Output your result
-    console.log(arr.reverse().join(' '));
+    console.log(result.join(' '));
 }
 
 solve();
