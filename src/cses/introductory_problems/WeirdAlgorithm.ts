@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 
-function solve() {
+function weirdAlgorithm() {
     // 1. Read all input from stdin (File Descriptor 0)
     const input: string = fs.readFileSync(0, 'utf-8');
     
@@ -31,4 +31,4 @@ function solve() {
     console.log(result.join(' '));
 }
 
-solve();
+weirdAlgorithm();
